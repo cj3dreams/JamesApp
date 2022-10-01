@@ -16,4 +16,7 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.frgView, HomeFragment())
             .commit()
     }
+    fun mem(){
+
+    }
 }
