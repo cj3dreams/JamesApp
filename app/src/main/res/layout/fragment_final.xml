@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.FinalFragment">
+    tools:context=".memory.ui.screens.FinalFragment">
 
     <TextView
         android:id="@+id/finalResultTimeTx"

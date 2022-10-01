@@ -1,4 +1,4 @@
-package com.template.data
+package com.template.memory.data
 
 object Data {
 

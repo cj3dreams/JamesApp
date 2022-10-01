@@ -1,13 +1,14 @@
-package com.template
+package com.template.memory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.template.ui.screens.HomeFragment
+import com.template.R
+import com.template.memory.ui.screens.HomeFragment
 
-class MainActivity : AppCompatActivity() {
+class MemoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_memory)
 
         supportActionBar?.hide()
         window.statusBarColor = resources.getColor(R.color.primary_dark)

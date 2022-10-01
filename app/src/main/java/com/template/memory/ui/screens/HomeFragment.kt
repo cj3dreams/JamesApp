@@ -1,4 +1,4 @@
-package com.template.ui.screens
+package com.template.memory.ui.screens
 
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences

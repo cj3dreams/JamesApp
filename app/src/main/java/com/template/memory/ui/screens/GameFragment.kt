@@ -1,4 +1,4 @@
-package com.template.ui.screens
+package com.template.memory.ui.screens
 
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.template.R
-import com.template.data.Data
-import com.template.ui.adapter.GameAdapter
+import com.template.memory.data.Data
+import com.template.memory.ui.adapter.GameAdapter
 import java.util.*
 import kotlin.properties.Delegates
 

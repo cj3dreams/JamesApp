@@ -1,4 +1,4 @@
-package com.template.widget
+package com.template.memory.widget
 
 import android.annotation.TargetApi
 import android.content.Context
