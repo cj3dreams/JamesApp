@@ -11,10 +11,16 @@
         android:theme="@style/Theme.Memory"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Wallpaper"
+            android:name=".about.AboutAppActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".wallpaper.WallpaperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,18 +29,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuizActivity"
+            android:name=".quiz.QuizActivity"
             android:exported="false" />
         <activity
             android:name=".memory.MemoryActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

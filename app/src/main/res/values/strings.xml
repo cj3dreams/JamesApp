@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Space</string>
+    <string name="mercury_name">Memory</string>
+    <string name="earth_name">About</string>
+    <string name="mars_name">Wallpaper</string>
+    <string name="jupiter_name">Space</string>
+    <string name="saturn_name">Space</string>
+    <string name="uranus_name">Space</string>
+    <string name="neptune_name">Space</string>
 
     <string-array name="gameModeArray">
         <item>2x2</item>
@@ -8,6 +15,7 @@
         <item>8x8</item>
     </string-array>
     <string name="resultText">Затраченное время\n</string>
+    <string name="venus_name">Quiz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
