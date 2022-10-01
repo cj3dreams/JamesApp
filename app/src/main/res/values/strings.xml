@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">memory</string>
+    <string name="app_name">Space</string>
 
     <string-array name="gameModeArray">
         <item>2x2</item>
