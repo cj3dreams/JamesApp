@@ -49,7 +49,7 @@
             android:layout_height="140dp"
             android:layout_below="@+id/mercury_name"
             android:layout_marginStart="50dp"
-            android:src="@drawable/sun" />
+            android:src="@drawable/venus" />
 
         <TextView
             android:id="@+id/venus_name"
@@ -131,7 +131,7 @@
             android:layout_height="250dp"
             android:layout_below="@+id/jupiter_name"
             android:layout_marginStart="40dp"
-            android:src="@drawable/sun" />
+            android:src="@drawable/saturn" />
 
         <TextView
             android:id="@+id/saturn_name"
@@ -152,7 +152,7 @@
             android:layout_below="@+id/saturn_name"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
-            android:src="@drawable/sun" />
+            android:src="@drawable/uranus" />
 
         <TextView
             android:id="@+id/uranus_name"
