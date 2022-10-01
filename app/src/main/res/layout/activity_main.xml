@@ -1,9 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".main.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/sun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-650dp"
+            android:scaleType="centerCrop"
+            android:scaleX="1.6"
+            android:scaleY="1.2"
+            android:src="@drawable/sun" />
+
+        <ImageView
+            android:id="@+id/mercury"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/sun"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/mercury" />
+
+        <TextView
+            android:id="@+id/mercury_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mercury"
+            android:layout_alignStart="@id/mercury"
+            android:layout_alignEnd="@id/mercury"
+            android:text="@string/mercury_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/venus"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_below="@+id/mercury_name"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/sun" />
+
+        <TextView
+            android:id="@+id/venus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/venus"
+            android:layout_alignStart="@id/venus"
+            android:layout_alignEnd="@id/venus"
+            android:textAlignment="center"
+            android:text="@string/venus_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/earth"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_below="@+id/venus_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/earth" />
+
+        <TextView
+            android:id="@+id/earth_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/earth"
+            android:layout_alignStart="@id/earth"
+            android:layout_alignEnd="@id/earth"
+            android:textAlignment="center"
+            android:text="@string/earth_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/mars"
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_below="@+id/earth_name"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/mars" />
+
+        <TextView
+            android:id="@+id/mars_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mars"
+            android:layout_alignStart="@id/mars"
+            android:layout_alignEnd="@id/mars"
+            android:textAlignment="center"
+            android:text="@string/mars_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/jupiter"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_below="@+id/mars_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/jupiter" />
+
+        <TextView
+            android:id="@+id/jupiter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jupiter"
+            android:layout_alignStart="@id/jupiter"
+            android:layout_alignEnd="@id/jupiter"
+            android:textAlignment="center"
+            android:text="@string/jupiter_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/saturn"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/jupiter_name"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/sun" />
+
+        <TextView
+            android:id="@+id/saturn_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saturn"
+            android:layout_alignStart="@id/saturn"
+            android:layout_alignEnd="@id/saturn"
+            android:textAlignment="center"
+            android:text="@string/saturn_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/uranus"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_below="@+id/saturn_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/sun" />
+
+        <TextView
+            android:id="@+id/uranus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uranus"
+            android:layout_alignStart="@id/uranus"
+            android:layout_alignEnd="@id/uranus"
+            android:textAlignment="center"
+            android:text="@string/uranus_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/neptune"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_below="@+id/uranus_name"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/neptune" />
+
+        <TextView
+            android:id="@+id/neptune_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/neptune"
+            android:layout_alignStart="@id/neptune"
+            android:layout_alignEnd="@id/neptune"
+            android:textAlignment="center"
+            android:text="@string/neptune_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
