@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="26dp">
+
+    <ImageView
+        android:layout_above="@+id/resultTx"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resultImgView"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        tools:src="@mipmap/victory"/>
+
+    <TextView
+        android:gravity="center"
+        android:maxLines="3"
+        android:id="@+id/resultTx"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ОТЛИЧНО!\n Правильный: 5 \n Неправильных 5"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/resultTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/ic_home"
+            android:backgroundTint="@color/accent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/btnReplay"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/btnBackHome"
+            android:background="@drawable/ic_replay"
+            android:backgroundTint="@color/accent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

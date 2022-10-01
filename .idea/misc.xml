@@ -5,13 +5,20 @@
       <map>
         <entry key="..\:/X-Lab/zAndroidStudio/AndroidSDK/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.1" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/drawable/ic_home.xml" value="0.21875" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/drawable/ic_image.xml" value="0.21875" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/drawable/ic_play.xml" value="0.19814814814814816" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/drawable/ic_replay.xml" value="0.21875" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/drawable/ic_star.xml" value="0.11145833333333334" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/dialog_layout.xml" value="0.1" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_final.xml" value="0.20260416666666667" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_finish_quiz.xml" value="0.20260416666666667" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_game.xml" value="0.2" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_home_quiz.xml" value="0.20260416666666667" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_playing_quiz.xml" value="0.20260416666666667" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/fragment_profile_quiz.xml" value="0.20260416666666667" />
+        <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/item_choose_image.xml" value="0.20260416666666667" />
         <entry key="..\:/X-Lab/zAndroidStudio/JK_0052_memory/app/src/main/res/layout/item_game_card.xml" value="0.2" />
       </map>
     </option>
