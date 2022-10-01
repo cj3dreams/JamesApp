@@ -17,7 +17,5 @@ class MemoryActivity : AppCompatActivity() {
             .replace(R.id.frgView, HomeFragment())
             .commit()
     }
-    fun mem(){
 
-    }
 }
