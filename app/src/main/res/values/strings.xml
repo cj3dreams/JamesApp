@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">memory</string>
+
+    <string-array name="gameModeArray">
+        <item>2x2</item>
+        <item>4x4</item>
+        <item>6x6</item>
+        <item>8x8</item>
+    </string-array>
+    <string name="resultText">Затраченное время\n</string>
+</resources>
