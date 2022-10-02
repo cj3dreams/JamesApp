@@ -37,10 +37,10 @@
             android:id="@+id/answer1Btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:maxLines="2"
+            android:backgroundTint="@color/button_dark_blue"
+            android:textColor="@color/primary"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
             android:textSize="17sp"
             tools:text="Кокочамбо вапвап" />
 
@@ -51,7 +51,8 @@
             android:layout_below="@+id/answer1Btn"
             android:maxLines="2"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
+            android:backgroundTint="@color/button_dark_blue"
+            android:textColor="@color/primary"
             android:textSize="17sp"
             tools:text="Кокочамбо вапвап" />
 
@@ -62,7 +63,8 @@
             android:layout_below="@+id/answer2Btn"
             android:maxLines="2"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
+            android:backgroundTint="@color/button_dark_blue"
+            android:textColor="@color/primary"
             android:textSize="17sp"
             tools:text="Кокочамбо вапвап" />
 
@@ -73,7 +75,8 @@
             android:layout_below="@+id/answer3Btn"
             android:maxLines="2"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
+            android:backgroundTint="@color/button_dark_blue"
+            android:textColor="@color/primary"
             android:textSize="17sp"
             tools:text="Кокочамбо вапвап" />
 
@@ -82,7 +85,7 @@
     <TextView
         android:id="@+id/currentQuestionTx"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
