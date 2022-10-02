@@ -10,5 +10,6 @@ data class MemoryItem(
     @DrawableRes val imageRes: Int = 0,
     @StringRes val factRes: Int = 0,
     val isPlaceholder: Boolean = true,
-    val isCenterView: Boolean = false
+    val isCenterView: Boolean = false,
+    val parentId: String = ""
 )
