@@ -11,7 +11,7 @@ object DataProvider {
     private val shuffledItems = getAllItems().shuffled()
 
     fun provideColumnItems(): List<MemoryColumn> = listOf(
-        createItem(::getFirstColumnItems, Offset.BIG, true),
+        createItem(::getFirstColumnItems, Offset.BIG, false),
         createItem(::getSecondColumnItems, Offset.REGULAR),
         createItem(::getThirdColumnItems, Offset.ZERO),
         createItem(::getFourthColumnItems, Offset.REGULAR),
@@ -21,7 +21,7 @@ object DataProvider {
     private fun createItem(
         items: (String) -> List<MemoryItem>,
         offset: Offset,
-        showOffsetStart: Boolean = false
+        showOffsetStart: Boolean = true
     ): MemoryColumn {
         val id = UUID.randomUUID().toString()
         return MemoryColumn(

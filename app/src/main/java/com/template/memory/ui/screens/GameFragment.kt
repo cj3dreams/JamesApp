@@ -49,10 +49,11 @@ class GameFragment : Fragment() {
 
     private var passedSeconds = 0
     private var timer: Timer? = null
-    private var countTimer: CountDownTimer? = null
+    private var hideItemWithDelayTimer: CountDownTimer? = null
     private var content = emptyList<MemoryColumn>()
     private var gameAdapter: GameColumnAdapter? = null
     private var lastClickedItem: MemoryItem? = null
+    private var toRemoveItem: MemoryItem? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -79,23 +80,25 @@ class GameFragment : Fragment() {
         }
         gameAdapter?.submitList(content)
 
-        countTimer = object : CountDownTimer(TIMER_DELAY_MILLIS, PERIOD_MILLIS) {
+        hideItemWithDelayTimer = object : CountDownTimer(TIMER_DELAY_MILLIS, PERIOD_MILLIS) {
             override fun onTick(p0: Long) {}
 
             override fun onFinish() {
+                toRemoveItem?.let(::updateItem)
                 cancel()
             }
         }
-        countTimer?.start()
     }
 
     private fun onItemClicked(item: MemoryItem) {
         val isVisible = lastClickedItem == null || lastClickedItem?.imageRes != item.imageRes
-        updateItem(item, isVisible)
+
         lastClickedItem = if (!isVisible) {
-            lastClickedItem?.let(::updateItem)
+            toRemoveItem = item
+            hideItemWithDelayTimer?.start()
             null
         } else {
+            updateItem(item, isVisible)
             startGuessTimer()
             item
         }
