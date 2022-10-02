@@ -18,31 +18,10 @@ class WallpaperActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wallpaper)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.primary)))
-        window.statusBarColor = resources.getColor(R.color.primary_dark)
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.frgView, HomeWallpaperFragment())
                 .commit()
-    }
-
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-        if (event.pointerCount == 3 && firstTimeTripleTouch == 0) {
-            firstTimeTripleTouch++
-            Toast.makeText(
-                this,
-                "After 1 second the application will be closed",
-                Toast.LENGTH_SHORT
-            ).show()
-            (object : CountDownTimer(1000, 1000) {
-                override fun onTick(p0: Long) {}
-                override fun onFinish() {
-                    this@WallpaperActivity.finish()
-                    cancel()
-                }
-            }).start()
-        }
-        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

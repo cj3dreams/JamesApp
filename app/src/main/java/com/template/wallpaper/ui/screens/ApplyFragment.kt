@@ -66,10 +66,10 @@ class ApplyFragment : Fragment() {
            val wallpaperManager = WallpaperManager.getInstance(requireContext())
             try {
                 wallpaperManager.setStream(requireContext().resources.assets.open("wallpapers/${wallpaperModel.fileName}"))
-                Toast.makeText(requireContext(), "Обои установлены", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Wallpaper has been set!", Toast.LENGTH_SHORT).show()
             }catch (e: Exception){
                 Log.e("Wallpaper manager error", e.message.toString())
-                Toast.makeText(requireContext(), "Что-то пошло не так", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
             }
         }
     }
