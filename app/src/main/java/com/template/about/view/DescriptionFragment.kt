@@ -1,7 +1,6 @@
 package com.template.about.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +18,7 @@ class DescriptionFragment(private val number: Int) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = layoutInflater.inflate(R.layout.fragment_solar_orbit, container, false)
+        val view = layoutInflater.inflate(R.layout.fragment_description, container, false)
         imageView = view.findViewById(R.id.teleskop_orbit_image)
         textView = view.findViewById(R.id.orbit_text1)
         return view
@@ -40,12 +39,12 @@ class DescriptionFragment(private val number: Int) : Fragment() {
             imageView.setImageResource(R.drawable.solar_system)
         }
         if (number == 4){
-            textView.setText(R.string.memory1)
-            imageView.setImageResource(R.drawable.memory1)
+            textView.setText(R.string.hublle)
+            imageView.setImageResource(R.drawable.hubble)
         }
         if (number == 5){
-            textView.setText(R.string.memory11)
-            imageView.setImageResource(R.drawable.memory11)
+            textView.setText(R.string.milky_way)
+            imageView.setImageResource(R.drawable.milky_way)
         }
     }
 }
