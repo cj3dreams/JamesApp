@@ -5,51 +5,57 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:clickable="true"
-    tools:context=".about.view.AboutDescriptionFragment"
-    android:focusable="true">
+    android:focusable="true"
+    tools:context=".about.view.AboutDescriptionFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
 
     <Button
+        android:id="@+id/orbit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
         android:layout_margin="12dp"
         android:backgroundTint="#0A1E57"
-        android:text="solar orbit JWST"
-        android:id="@+id/orbit_button"/>
+        android:text="solar orbit JWST" />
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
         android:layout_below="@+id/orbit_button"
         android:layout_margin="12dp"
         android:backgroundTint="#0A1E57"
-        android:text="JWST"/>
+        android:text="JWST" />
 
     <Button
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
         android:layout_below="@+id/button2"
         android:layout_margin="12dp"
         android:backgroundTint="#0A1E57"
-        android:text="solar system"/>
+        android:text="solar system" />
 
     <Button
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button4"
         android:layout_below="@+id/button3"
         android:layout_margin="12dp"
         android:backgroundTint="#0A1E57"
-        android:text="hubble"/>
+        android:text="hubble" />
 
     <Button
+        android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button5"
         android:layout_below="@+id/button4"
         android:layout_margin="12dp"
         android:backgroundTint="#0A1E57"
-        android:text="MILKY WAY"/>
+        android:text="MILKY WAY" />
 
 </RelativeLayout>
