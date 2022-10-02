@@ -1,5 +1,6 @@
 package com.template.memory.ui.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -19,7 +20,7 @@ class GameItemAdapter(
         override fun areItemsTheSame(
             oldItem: MemoryItem,
             newItem: MemoryItem
-        ): Boolean = oldItem.id == newItem.id
+        ): Boolean = oldItem.factRes == newItem.factRes
 
         override fun areContentsTheSame(
             oldItem: MemoryItem,
@@ -52,7 +53,9 @@ class GameItemAdapter(
                 root.apply {
                     isVisible = item.isVisible
                     setOnClickListener {
-                        if (!item.isCenterView) onClick(item)
+                        if (!item.isCenterView && item.isPlaceholder) {
+                            onClick(item)
+                        }
                     }
                 }
                 if (item.isCenterView) {

@@ -8,7 +8,11 @@ import java.util.*
 
 object DataProvider {
 
-    private val shuffledItems = getAllItems().shuffled()
+    private val shuffledItems by lazy {
+        val items = getAllItems().shuffled().take(9)
+        (items + items).shuffled()
+            .map { it.copy(id = UUID.randomUUID().toString()) }
+    }
 
     fun provideColumnItems(): List<MemoryColumn> = listOf(
         createItem(::getFirstColumnItems, Offset.BIG, false),
@@ -40,7 +44,16 @@ object DataProvider {
 
     private fun getThirdColumnItems(id: String): List<MemoryItem> = shuffledItems.subList(7, 11)
         .toMutableList()
-        .apply { add(2, MemoryItem(isCenterView = true)) }
+        .apply {
+            add(
+                2,
+                MemoryItem(
+                    isCenterView = true,
+                    factRes = R.string.app_name, // stub
+                    imageRes = R.drawable.sun // stub
+                )
+            )
+        }
         .map { it.copy(parentId = id) }
 
     private fun getFourthColumnItems(id: String): List<MemoryItem> = shuffledItems.subList(11, 15)
@@ -106,13 +119,13 @@ object DataProvider {
             imageRes = R.drawable.memory14,
             factRes = R.string.memory14
         ),
-        MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
-        ),
-        MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
-        )
+//        MemoryItem(
+//            imageRes = R.drawable.james_webb_telescope,
+//            factRes = R.string.fact_webbs_telescope
+//        ),
+//        MemoryItem(
+//            imageRes = R.drawable.james_webb_telescope,
+//            factRes = R.string.fact_webbs_telescope
+//        )
     )
 }

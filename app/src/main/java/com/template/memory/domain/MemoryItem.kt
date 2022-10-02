@@ -7,8 +7,8 @@ import java.util.*
 data class MemoryItem(
     val id: String = UUID.randomUUID().toString(),
     val isVisible: Boolean = true,
-    @DrawableRes val imageRes: Int = 0,
-    @StringRes val factRes: Int = 0,
+    @DrawableRes val imageRes: Int,
+    @StringRes val factRes: Int,
     val isPlaceholder: Boolean = true,
     val isCenterView: Boolean = false,
     val parentId: String = ""

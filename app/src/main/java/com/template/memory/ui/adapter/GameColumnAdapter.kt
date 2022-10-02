@@ -62,6 +62,7 @@ class GameColumnAdapter(
         }
 
         fun bind(item: MemoryColumn) = with(binding.root) {
+            gameItemAdapter.submitList(item.items)
             updateLayoutParams<ViewGroup.MarginLayoutParams> {
                 topMargin = item.offset.getPixels(resources.displayMetrics)
                 if (item.showOffsetStart) {
@@ -69,7 +70,6 @@ class GameColumnAdapter(
                         -(itemSizePixels * (ITEM_OFFSET_PERCENTAGE_BY_ITEM - ITEM_DIVIDER_PERCENTAGE_BY_ITEM)).toInt()
                 }
             }
-            gameItemAdapter.submitList(item.items)
         }
     }
 }
