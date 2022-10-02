@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.ColorMatrix
 import android.graphics.ColorMatrixColorFilter
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import com.template.memory.MemoryActivity
 import com.template.quiz.QuizActivity
 import com.template.wallpaper.WallpaperActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mercury: ImageView
     private lateinit var venus: ImageView
@@ -45,17 +46,34 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, WallpaperActivity::class.java))
         }
         jupiter = findViewById(R.id.jupiter)
-        jupiter.makeBlackAndWhite()
+        jupiter.apply {
+            setOnClickListener(this@MainActivity)
+            makeBlackAndWhite()
+        }
         saturn = findViewById(R.id.saturn)
-        saturn.makeBlackAndWhite()
+        saturn.apply {
+            setOnClickListener(this@MainActivity)
+            makeBlackAndWhite()
+        }
         uranus = findViewById(R.id.uranus)
-        uranus.makeBlackAndWhite()
+        uranus.apply {
+            setOnClickListener(this@MainActivity)
+            makeBlackAndWhite()
+        }
         neptune = findViewById(R.id.neptune)
-        neptune.makeBlackAndWhite()
+        neptune.apply {
+            setOnClickListener(this@MainActivity)
+            makeBlackAndWhite()
+        }
     }
 
     private fun ImageView.makeBlackAndWhite() {
         colorFilter = ColorMatrixColorFilter(ColorMatrix().apply { setSaturation(0f) })
+    }
+
+    // Unavailable menus action
+    override fun onClick(v: View?) {
+        Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show()
     }
 
 }
