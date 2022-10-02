@@ -12,6 +12,9 @@
         A Solar Orbit
 The James Webb Space Telescope will not be in orbit around the Earth, like the Hubble Space Telescope is - it will actually orbit the Sun, 1.5 million kilometers (1 million miles) away from the Earth at what is called the second Lagrange point or L2. What is special about this orbit is that it lets the telescope stay in line with the Earth as it moves around the Sun. This allows the satellite\'s large sunshield to protect the telescope from the light and heat of the Sun and Earth (and Moon).
     </string>
+    <string name="space">
+        Space
+    </string>
 
     <string name="JWST">
         Origins of JWST

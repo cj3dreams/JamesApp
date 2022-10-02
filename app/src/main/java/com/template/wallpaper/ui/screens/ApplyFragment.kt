@@ -58,7 +58,7 @@ class ApplyFragment : Fragment() {
         }
 
         wallpaperNameTx.text = WallpapersData.getWallpapersNameIfExist(wallpaperModel.fileName)
-            ?: resources.getString(R.string.app_name)
+            ?: resources.getString(R.string.space)
 
         glide(requireContext(), wallpaperImgView, Uri.parse("file:///android_asset/wallpapers/${wallpaperModel.fileName}"))
 

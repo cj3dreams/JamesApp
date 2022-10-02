@@ -7,7 +7,7 @@ object WallpapersData {
 
     private val wallpaperNames = listOf(
 
-        WallpaperModel("Best","wallpaper_1.png"),
+        WallpaperModel("Space","wallpaper_1.png"),
 
         WallpaperModel("Just a Beautiful Nature", "wallpaper_3.jpg"),
 
