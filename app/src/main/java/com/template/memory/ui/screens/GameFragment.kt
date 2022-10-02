@@ -15,10 +15,14 @@ import com.google.android.material.snackbar.Snackbar
 import com.template.R
 import com.template.databinding.FragmentGameBinding
 import com.template.memory.data.DataProvider
+import com.template.memory.domain.CancelException
 import com.template.memory.domain.MemoryColumn
 import com.template.memory.domain.MemoryItem
+import com.template.memory.domain.Shape
 import com.template.memory.ui.adapter.GameColumnAdapter
 import com.template.memory.widget.GameItemSizeCalculator
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.*
@@ -55,6 +59,19 @@ class GameFragment : Fragment() {
     private var content = emptyList<MemoryColumn>()
     private var gameAdapter: GameColumnAdapter? = null
     private var lastClickedItem: MemoryItem? = null
+    private var delayJob: Job? = null
+    private val exceptionHandler = CoroutineExceptionHandler { _, exception ->
+        if (exception is CancelException) {
+            lastClickedItem?.let {
+                updateItem(
+                    item = it,
+                    shape = Shape.COMPLETED
+                )
+            }
+            updateItem(exception.item, Shape.COMPLETED)
+            lastClickedItem = null
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -83,25 +100,31 @@ class GameFragment : Fragment() {
     }
 
     private fun onItemClicked(item: MemoryItem) {
-        lifecycleScope.launch {
-            if (lastClickedItem == item) {
-                return@launch
-            }
+        if (delayJob?.isActive == true) {
+            return
+        }
+        delayJob = lifecycleScope.launch(exceptionHandler) {
+            if (lastClickedItem == item) return@launch
             if (lastClickedItem == null) {
-                updateItem(item, true, false)
+                updateItem(item, null)
                 lastClickedItem = item
                 return@launch
             }
             if (lastClickedItem?.imageRes == item.imageRes) {
                 showSnackbar(item.factRes)
-                updateItem(item, isVisible = true, isPlaceHolder = false)
+                updateItem(item, null)
                 delay(DELAY_HIDE_ITEMS)
-                lastClickedItem?.let(::updateItem)
-                updateItem(item)
+                lastClickedItem?.let {
+                    updateItem(
+                        item = it,
+                        shape = Shape.COMPLETED
+                    )
+                }
+                updateItem(item, Shape.COMPLETED)
                 lastClickedItem = null
             } else {
-                updateItem(item, isVisible = true, isPlaceHolder = false)
-                updateItem(lastClickedItem!!, isVisible = true, isPlaceHolder = true)
+                updateItem(lastClickedItem!!, shape = Shape.DEFAULT)
+                updateItem(item, shape = null)
                 lastClickedItem = item
             }
         }
@@ -109,8 +132,7 @@ class GameFragment : Fragment() {
 
     private fun updateItem(
         item: MemoryItem,
-        isVisible: Boolean = false,
-        isPlaceHolder: Boolean = false
+        shape: Shape? = null
     ) {
         val columnIndex = content.indexOfFirst { it.id == item.parentId }
         val foundColumn = content[columnIndex]
@@ -118,7 +140,7 @@ class GameFragment : Fragment() {
         val newItems = foundColumn.items.toMutableList()
         val index = newItems.indexOfFirst { it.id == item.id }
         val itemModel = newItems[index]
-        newItems[index] = itemModel.copy(isVisible = isVisible, isPlaceholder = isPlaceHolder)
+        newItems[index] = itemModel.copy(shape = shape)
 
         val newContent = content.toMutableList()
         newContent[columnIndex] = newContent[columnIndex].copy(items = newItems)

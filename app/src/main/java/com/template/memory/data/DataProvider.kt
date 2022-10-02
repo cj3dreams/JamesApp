@@ -118,14 +118,6 @@ object DataProvider {
         MemoryItem(
             imageRes = R.drawable.memory14,
             factRes = R.string.memory14
-        ),
-//        MemoryItem(
-//            imageRes = R.drawable.james_webb_telescope,
-//            factRes = R.string.fact_webbs_telescope
-//        ),
-//        MemoryItem(
-//            imageRes = R.drawable.james_webb_telescope,
-//            factRes = R.string.fact_webbs_telescope
-//        )
+        )
     )
 }

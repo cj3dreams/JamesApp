@@ -1,6 +1,5 @@
 package com.template.memory.ui.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -8,9 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.template.R
 import com.template.databinding.ItemGameCardBinding
 import com.template.memory.domain.MemoryItem
+import com.template.memory.domain.Shape
 
 class GameItemAdapter(
     private val onClick: (MemoryItem) -> Unit,
@@ -50,19 +49,15 @@ class GameItemAdapter(
         fun bind(item: MemoryItem) {
             with(binding) {
                 setSize()
-                root.apply {
-                    isVisible = item.isVisible
-                    setOnClickListener {
-                        if (!item.isCenterView && item.isPlaceholder) {
-                            onClick(item)
-                        }
+                setImage(item)
+                root.setOnClickListener {
+                    if (!item.isCenterView && item.shape == Shape.DEFAULT) {
+                        onClick(item)
                     }
                 }
                 if (item.isCenterView) {
                     tvTitle.isVisible = true
                     ivContent.isVisible = false
-                } else {
-                    setImage(item)
                 }
             }
         }
@@ -75,10 +70,9 @@ class GameItemAdapter(
         }
 
         private fun setImage(item: MemoryItem) {
-            val data = if (item.isPlaceholder) {
-                R.drawable.hexagon_shape
-            } else {
-                item.imageRes
+            val data = when (item.shape) {
+                Shape.COMPLETED, Shape.DEFAULT -> item.shape.resId
+                null -> item.imageRes
             }
             binding.ivContent.load(data)
         }

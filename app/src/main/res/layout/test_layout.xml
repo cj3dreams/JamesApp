@@ -9,7 +9,7 @@
         android:id="@+id/ic_1"
         android:layout_width="@dimen/shape_size"
         android:layout_height="@dimen/shape_size"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +19,7 @@
         android:layout_width="@dimen/shape_size"
         android:layout_height="@dimen/shape_size"
         android:layout_marginTop="@dimen/shape_offset"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintStart_toEndOf="@+id/ic_1"
         app:layout_constraintTop_toTopOf="@+id/ic_1" />
 
@@ -28,7 +28,7 @@
         android:layout_width="@dimen/shape_size"
         android:layout_height="@dimen/shape_size"
         android:layout_marginTop="@dimen/shape_offset"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintEnd_toStartOf="@+id/ic_1"
         app:layout_constraintTop_toTopOf="@+id/ic_1" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/ic_4"
         android:layout_width="@dimen/shape_size"
         android:layout_height="@dimen/shape_size"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintEnd_toStartOf="@+id/ic_2"
         app:layout_constraintStart_toEndOf="@+id/ic_3"
         app:layout_constraintTop_toBottomOf="@+id/ic_1" />
@@ -46,7 +46,7 @@
         android:layout_width="39dp"
         android:layout_height="39dp"
         android:layout_marginTop="@dimen/shape_offset"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintEnd_toStartOf="@+id/ic_3"
         app:layout_constraintTop_toTopOf="@+id/ic_3" />
 
@@ -54,7 +54,7 @@
         android:id="@+id/ic_6"
         android:layout_width="@dimen/shape_size"
         android:layout_height="@dimen/shape_size"
-        android:src="@drawable/hexagon_shape"
+        android:src="@drawable/hexagon_gold"
         app:layout_constraintStart_toEndOf="@id/ic_5"
         app:layout_constraintTop_toBottomOf="@id/ic_3"/>
 
@@ -64,6 +64,6 @@
         android:layout_height="@dimen/shape_size"
         app:layout_constraintTop_toBottomOf="@id/ic_4"
         app:layout_constraintStart_toEndOf="@id/ic_6"
-        android:src="@drawable/hexagon_shape"/>
+        android:src="@drawable/hexagon_gold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
