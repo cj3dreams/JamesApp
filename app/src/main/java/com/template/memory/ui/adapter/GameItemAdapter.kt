@@ -51,7 +51,9 @@ class GameItemAdapter(
                 setSize()
                 root.apply {
                     isVisible = item.isVisible
-                    setOnClickListener { onClick(item) }
+                    setOnClickListener {
+                        if (!item.isCenterView) onClick(item)
+                    }
                 }
                 if (item.isCenterView) {
                     tvTitle.isVisible = true

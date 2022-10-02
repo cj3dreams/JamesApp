@@ -55,7 +55,10 @@ class GameColumnAdapter(
         private val gameItemAdapter = GameItemAdapter(onClick, itemSizePixels)
 
         init {
-            binding.rvItems.adapter = gameItemAdapter
+            binding.rvItems.apply {
+                adapter = gameItemAdapter
+                itemAnimator = null
+            }
         }
 
         fun bind(item: MemoryColumn) = with(binding.root) {

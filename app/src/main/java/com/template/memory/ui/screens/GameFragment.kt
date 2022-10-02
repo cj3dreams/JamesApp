@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.StringRes
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -48,9 +49,11 @@ class GameFragment : Fragment() {
 
     private var passedSeconds = 0
     private var timer: Timer? = null
-    private var countTimer: CountDownTimer? = null
+    private var hideItemWithDelayTimer: CountDownTimer? = null
     private var content = emptyList<MemoryColumn>()
     private var gameAdapter: GameColumnAdapter? = null
+    private var lastClickedItem: MemoryItem? = null
+    private var toRemoveItem: MemoryItem? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -64,40 +67,88 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?): Unit = with(binding) {
         super.onViewCreated(view, savedInstanceState)
 
+        content = DataProvider.provideColumnItems()
         gameAdapter = GameColumnAdapter(
             itemSizePixels = GameItemSizeCalculator.calculateSize(resources.displayMetrics),
             onClick = ::onItemClicked
         )
 
         binding.gameRecyclerView.apply {
+            itemAnimator = null
             layoutManager = LinearLayoutManager(context, HORIZONTAL, false)
             adapter = gameAdapter
         }
-        gameAdapter?.submitList(DataProvider.provideColumnItems())
+        gameAdapter?.submitList(content)
 
-        countTimer = object : CountDownTimer(TIMER_DELAY_MILLIS, PERIOD_MILLIS) {
+        hideItemWithDelayTimer = object : CountDownTimer(TIMER_DELAY_MILLIS, PERIOD_MILLIS) {
             override fun onTick(p0: Long) {}
 
             override fun onFinish() {
+                toRemoveItem?.let(::updateItem)
                 cancel()
             }
         }
-        countTimer?.start()
     }
 
     private fun onItemClicked(item: MemoryItem) {
-        content.map { column ->
-            val index = column.items.indexOfFirst { it.id == item.id }
-            if (index != WRONG_PARAM) {
-                val newItems = column.items.toMutableList()
-                newItems[index] = column.items[index].copy(
-                    isPlaceholder = false
-                )
-                column.copy(items = newItems)
-            } else {
-                column
+        val isVisible = lastClickedItem == null || lastClickedItem?.imageRes != item.imageRes
+
+        lastClickedItem = if (!isVisible) {
+            toRemoveItem = item
+            hideItemWithDelayTimer?.start()
+            null
+        } else {
+            updateItem(item, isVisible)
+            startGuessTimer()
+            item
+        }
+    }
+
+    private fun updateItem(
+        item: MemoryItem,
+        isVisible: Boolean = false,
+        isPlaceHolder: Boolean = false
+    ) {
+        val columnIndex = content.indexOfFirst { it.id == item.parentId }
+        val foundColumn = content[columnIndex]
+
+        val newItems = foundColumn.items.toMutableList()
+        val index = newItems.indexOfFirst { it.id == item.id }
+        newItems[index] = item.copy(isVisible = isVisible, isPlaceholder = isPlaceHolder)
+
+        val newContent = content.toMutableList()
+        newContent[columnIndex] = content[columnIndex].copy(items = newItems)
+        updateData(newContent)
+    }
+
+    private fun startGuessTimer() {
+
+    }
+
+    private fun updateData(updatedData: List<MemoryColumn>) {
+        content = updatedData
+        gameAdapter?.submitList(updatedData)
+    }
+
+    private fun updateLastClickedItem() {
+        var column: MemoryColumn? = null
+        val updatedColumn = content.find { data ->
+            data.items.find { it.id == lastClickedItem?.id } != null
+        }?.let { columnWithItem ->
+            column = columnWithItem
+            val items = columnWithItem.items
+            val newItems = items.toMutableList()
+            val index = newItems.indexOf(lastClickedItem)
+            lastClickedItem?.copy(isVisible = false)?.let { newItems[index] = it }
+            columnWithItem.copy(items = newItems)
+        }
+
+        updatedColumn?.let { newColumn ->
+            val index = content.indexOf(column)
+            content.toMutableList().apply {
+                set(index, newColumn)
             }
-        }.let { gameAdapter?.submitList(it) }
+        }?.let(::updateData)
     }
 
     private fun navigateToNextScreen() {
@@ -130,6 +181,10 @@ class GameFragment : Fragment() {
         bindingNullable = null
     }
 
-    private fun snackBar(text: String) = Snackbar.make(requireView(), text, 1200).show()
+    private fun showSnackbar(@StringRes textRes: Int) = Snackbar.make(
+        requireView(),
+        textRes,
+        Snackbar.LENGTH_LONG
+    ).show()
 
 }
