@@ -79,7 +79,7 @@
             android:layout_alignStart="@id/earth"
             android:layout_alignEnd="@id/earth"
             android:textAlignment="center"
-            android:text="@string/earth_name"
+            android:text="Guide"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -127,9 +127,10 @@
         <ImageView
             android:id="@+id/saturn"
             android:layout_width="265dp"
-            android:layout_height="265dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:layout_below="@+id/jupiter_name"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="30dp"
             android:src="@drawable/saturn" />
 
         <TextView
@@ -147,9 +148,10 @@
         <ImageView
             android:id="@+id/uranus"
             android:layout_width="220dp"
-            android:layout_height="220dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/saturn_name"
             android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
             android:layout_marginEnd="20dp"
             android:src="@drawable/uranus" />
 
