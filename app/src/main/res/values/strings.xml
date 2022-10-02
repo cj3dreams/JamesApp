@@ -38,7 +38,7 @@ There have been other satellites out at Sun-Earth L2, where Webb will be, includ
         <item>6x6</item>
         <item>8x8</item>
     </string-array>
-    <string name="resultText">Затраченное время\n</string>
+    <string name="resultText">Elapsed time</string>
 
     <string name="memory">
         Among its most important goals, JWST will see the light from the universe’s first stars and galaxies.
