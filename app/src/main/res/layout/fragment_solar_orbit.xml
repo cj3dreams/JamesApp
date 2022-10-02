@@ -3,45 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".about.SolarOrbit">
+    android:background="@color/white"
+    tools:context=".about.view.DescriptionFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/teleskop_orbit1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/teleskop_orbit_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/orbit_text1"
-            android:src="@drawable/orbit1" />
-
-        <ImageView
-            android:id="@+id/teleskop_orbit2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/teleskop_orbit1"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/orbit2" />
+            android:layout_margin="18dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="18dp"
             android:id="@+id/orbit_text1"
-            android:text="@string/solar_orbit"
-            android:textSize="17sp"
-            android:textColor="@color/black" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/teleskop_orbit_image"
             android:layout_margin="18dp"
-            android:text="@string/L2"
-            android:textSize="17sp"
             android:textColor="@color/black"
-            android:layout_below="@+id/teleskop_orbit2"/>
+            android:textSize="17sp" />
 
     </RelativeLayout>
 

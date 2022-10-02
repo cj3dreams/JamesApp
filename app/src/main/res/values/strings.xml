@@ -10,19 +10,22 @@
     <string name="venus_name">Quiz</string>
     <string name="solar_orbit">
         A Solar Orbit
-
 The James Webb Space Telescope will not be in orbit around the Earth, like the Hubble Space Telescope is - it will actually orbit the Sun, 1.5 million kilometers (1 million miles) away from the Earth at what is called the second Lagrange point or L2. What is special about this orbit is that it lets the telescope stay in line with the Earth as it moves around the Sun. This allows the satellite\'s large sunshield to protect the telescope from the light and heat of the Sun and Earth (and Moon).
+    </string>
+
+    <string name="JWST">
+        Origins of JWST
+Work on the project began over 30 years ago at STScI with a challenge from Institute Director Riccardo Giacconi to “think about the next major mission beyond Hubble.” The development of a mission concept came in September 1989, with a workshop held at STScI, before Hubble was launched. \n The James Webb Space Telescope was launched on 25 December 2021 on an Ariane 5 rocket from Kourou, French Guiana, and arrived at the Sun–Earth L2 Lagrange point in January 2022. The first image from JWST was released to the public via a press conference on 11 July 2022.
+
+JWST\'s primary mirror consists of 18 hexagonal mirror segments made of gold-plated beryllium, which combined create a 6.5-meter-diameter (21 ft) mirror, compared with Hubble\'s 2.4 m (7 ft 10 in). This gives JWST a light-collecting area of about 25 square meters, about six times that of Hubble. Unlike Hubble, which observes in the near ultraviolet and visible (0.1 to 0.8 μm), and near infrared (0.8–2.5 μm)[11] spectra, JWST observes in a lower frequency range, from long-wavelength visible light (red) through mid-infrared (0.6–28.3 μm). The telescope must be kept extremely cold, below 50 K (−223 °C; −370 °F), such that the infrared light emitted by the telescope itself does not interfere with the collected light. It is deployed in a solar orbit near the Sun–Earth L2 Lagrange point, about 1.5 million kilometers (930,000 mi) from Earth, where its five-layer sunshield protects it from warming by the Sun, Earth, and Moon.
     </string>
     <string name="L2">
         What is L2?
-
 Joseph-Louis Lagrange was an 18th century mathematician who found the solution to what is called the “three-body problem.” That is, is there any stable configuration, in which three bodies could orbit each other, yet stay in the same position relative to each other? As it turns out, there are five solutions to this problem - and they are called the five Lagrange points, after their discoverer. At Lagrange points, the gravitational pull of two large masses precisely equals the centripetal force required for a small object to move with them. The L1, L2, and L3 points are all in line with each other - and L4 and L5 are at the points of equilateral triangles.
 +
 Diagram showing the Sun, the Earth, Webb, and the Lagrange points
 Lagrange Points.
-
 The first Sun-Earth Lagrange point, L1, is 1.5 million km from the Earth towards the Sun, and there have been many solar observatories located here, including DSCOVR, WIND, SOHO, and ACE.
-
 There have been other satellites out at Sun-Earth L2, where Webb will be, including WMAP, Herschel, and Planck.
     </string>
 
@@ -82,6 +85,7 @@ There have been other satellites out at Sun-Earth L2, where Webb will be, includ
     <string name="memory1">
         Unique image of jupiter from James Webb
     </string>
+    <string name="solar_system">The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority 99.86% of the system\'s mass is in the Sun, with most of the remaining mass contained in the planet Jupiter. The four inner system planets Mercury, Venus, Earth and Mars are terrestrial planets, being composed primarily of rock and metal. The four giant planets of the outer system are substantially larger and more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium the next two, Uranus and Neptune, are ice giants, being composed mostly of volatile substances with relatively high melting points compared with hydrogen and helium, such as water, ammonia, and methane. All eight planets have nearly circular orbits that lie near the plane of Earth\'s orbit, called the ecliptic</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

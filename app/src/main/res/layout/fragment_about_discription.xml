@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".about.view.AboutDescriptionFragment">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="#0A1E57"
+        android:text="solar orbit JWST"
+        android:id="@+id/orbit_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_below="@+id/orbit_button"
+        android:layout_margin="12dp"
+        android:backgroundTint="#0A1E57"
+        android:text="JWST"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_margin="12dp"
+        android:backgroundTint="#0A1E57"
+        android:text="solar_system"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button3"
+        android:layout_margin="12dp"
+        android:backgroundTint="#0A1E57"
+        android:text="sdvs"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_margin="12dp"
+        android:backgroundTint="#0A1E57"
+        android:text="sdvs"/>
+
+</RelativeLayout>
