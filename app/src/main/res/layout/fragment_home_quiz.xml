@@ -15,7 +15,7 @@
         android:layout_height="48dp" />
 
     <TextView
-        android:textColor="@color/primary_text"
+        android:textColor="@color/white"
         android:layout_marginStart="8dp"
         android:id="@+id/userNameTx"
         android:layout_width="wrap_content"
@@ -28,15 +28,12 @@
         android:textSize="20sp"
         tools:text="User" />
 
-    <Button
+    <ImageView
         android:id="@+id/btnPlay"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_centerInParent="true"
-        android:background="@drawable/ic_play"
-        android:backgroundTint="@color/accent"
-        android:clickable="true"
-        android:focusable="true"
+        android:src="@drawable/ic_play"
         android:foreground="?android:selectableItemBackgroundBorderless" />
 
     <TextView
@@ -44,8 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnPlay"
         android:layout_centerHorizontal="true"
-        android:text="Играть!"
-        android:textColor="@color/primary_text"
+        android:text="Play!"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -62,13 +59,13 @@
             android:src="@mipmap/ic_launcher" />
 
         <TextView
-            android:layout_marginStart="8dp"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
+            android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/iconOfAppImgView"
             android:gravity="center"
             android:text="@string/app_name"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/white"
             android:textSize="16sp" />
     </RelativeLayout>
 

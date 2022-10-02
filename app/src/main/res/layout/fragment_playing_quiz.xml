@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@color/black"
     android:padding="26dp">
 
     <ImageView
@@ -14,14 +15,14 @@
         android:layout_height="200dp"/>
 
     <TextView
-        android:layout_below="@+id/questionImgView"
         android:id="@+id/questionTx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/questionImgView"
         android:gravity="center"
         android:maxLines="2"
         android:minHeight="50dp"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/white"
         android:textSize="20sp"
         tools:text="Город в котором вы жили и будет жить скажите только и только правду без враьнья пожалуйста!" />
 

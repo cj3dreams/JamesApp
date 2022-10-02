@@ -3,10 +3,10 @@
     <string name="mercury_name">Memory</string>
     <string name="earth_name">About</string>
     <string name="mars_name">Wallpaper</string>
-    <string name="jupiter_name">Space</string>
-    <string name="saturn_name">Space</string>
-    <string name="uranus_name">Space</string>
-    <string name="neptune_name">Space</string>
+    <string name="jupiter_name">Jupiter</string>
+    <string name="saturn_name">Saturn</string>
+    <string name="uranus_name">Uranus</string>
+    <string name="neptune_name">Neptune</string>
     <string name="venus_name">Quiz</string>
     <string name="solar_orbit">
         A Solar Orbit
@@ -98,4 +98,5 @@ It took many years before technology caught up with Oberth\'s idea. The American
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fact_webbs_telescope">One Side of the Telescope Is Hotter Than Death Valley, the Other Side Is Colder Than Antarctica</string>
     <string name="memory_title">James\nApp</string>
+    <string name="select_game_level">Select difficulty level</string>
 </resources>

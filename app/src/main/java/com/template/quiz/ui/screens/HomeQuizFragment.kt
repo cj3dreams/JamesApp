@@ -1,21 +1,19 @@
 package com.template.quiz.ui.screens
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.template.R
 
 
 class HomeQuizFragment : Fragment(), View.OnClickListener {
-    private lateinit var btnPlay: Button
+    private lateinit var btnPlay: ImageView
     private lateinit var btnUserProfile: ImageView
     private lateinit var userNameTx: TextView
 
@@ -53,10 +51,10 @@ class HomeQuizFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.btnPlay -> {
-                val gameMode = arrayOf("Низкий", "Средний", "Высокий")
+                val gameMode = resources.getStringArray(R.array.quiz_levels)
                 var selectedGameModeIndex = 0
                 var selectedGameModeString = ""
-                MaterialAlertDialogBuilder(requireContext()).setTitle("Выберите уровень сложности")
+                MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.select_game_level)
                     .setSingleChoiceItems(gameMode,selectedGameModeIndex){ _, which ->
                         selectedGameModeIndex = which
                         selectedGameModeString = gameMode[which]
@@ -64,13 +62,13 @@ class HomeQuizFragment : Fragment(), View.OnClickListener {
                     .setPositiveButton("Ok") { _, _ ->
                         var numbersOfQuestions = 10
                         when (selectedGameModeString){
-                            "Средний" -> numbersOfQuestions = 15
-                            "Высокий" -> numbersOfQuestions = 20
+                            "Medium" -> numbersOfQuestions = 15
+                            "High" -> numbersOfQuestions = 20
                         }
                         val playingFragment = PlayingQuizFragment.getNumbersOfQuestions(numbersOfQuestions)
                         changeFragment(playingFragment)
                     }
-                    .setNegativeButton("Отмена") { dialog, _ ->
+                    .setNegativeButton("Cancel") { dialog, _ ->
                         dialog.dismiss()
                     }.show()
             }

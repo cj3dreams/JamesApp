@@ -3,19 +3,18 @@ package com.template.quiz.ui.screens
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
 import com.template.R
 import com.template.quiz.data.QuestionsConstants
 import com.template.quiz.domain.model.QuestionModel
-import kotlin.collections.shuffled
 
 
 class PlayingQuizFragment : Fragment(), View.OnClickListener {
@@ -125,11 +124,11 @@ class PlayingQuizFragment : Fragment(), View.OnClickListener {
         }
     }
     private fun doCorrectTask(){
-        Snackbar.make(requireView(), "Правильно!", 1000).show()
+        Snackbar.make(requireView(), "Correct answer!", 1000).show()
         correctAnswers++
     }
     private fun doIncorrectTask(){
-        Snackbar.make(requireView(), "Неправильно! Правильный ответ: ${questionTx.tag}", 2000).show()
+        Snackbar.make(requireView(), "Wrong answer! Correct answer: ${questionTx.tag}", 2000).show()
         incorrectAnswers++
     }
 

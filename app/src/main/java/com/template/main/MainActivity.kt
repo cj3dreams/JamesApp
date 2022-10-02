@@ -1,10 +1,12 @@
 package com.template.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.template.R
 import com.template.about.AboutAppActivity
 import com.template.memory.MemoryActivity
@@ -12,7 +14,7 @@ import com.template.quiz.QuizActivity
 import com.template.wallpaper.WallpaperActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var sun: ImageView
+
     private lateinit var mercury: ImageView
     private lateinit var venus: ImageView
     private lateinit var earth: ImageView
@@ -25,10 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        sun = findViewById(R.id.sun)
-        sun.setOnClickListener {
-            Toast.makeText(this, "sun", Toast.LENGTH_SHORT).show()
-        }
+
         mercury = findViewById(R.id.mercury)
         mercury.setOnClickListener {
             startActivity(Intent(this, MemoryActivity::class.java))
@@ -46,20 +45,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, WallpaperActivity::class.java))
         }
         jupiter = findViewById(R.id.jupiter)
-        jupiter.setOnClickListener {
-            Toast.makeText(this, "earth", Toast.LENGTH_SHORT).show()
-        }
+        jupiter.makeBlackAndWhite()
         saturn = findViewById(R.id.saturn)
-        saturn.setOnClickListener {
-            Toast.makeText(this, "earth", Toast.LENGTH_SHORT).show()
-        }
+        saturn.makeBlackAndWhite()
         uranus = findViewById(R.id.uranus)
-        uranus.setOnClickListener {
-            Toast.makeText(this, "earth", Toast.LENGTH_SHORT).show()
-        }
+        uranus.makeBlackAndWhite()
         neptune = findViewById(R.id.neptune)
-        neptune.setOnClickListener {
-            Toast.makeText(this, "earth", Toast.LENGTH_SHORT).show()
-        }
+        neptune.makeBlackAndWhite()
     }
+
+    private fun ImageView.makeBlackAndWhite() {
+        colorFilter = ColorMatrixColorFilter(ColorMatrix().apply { setSaturation(0f) })
+    }
+
 }

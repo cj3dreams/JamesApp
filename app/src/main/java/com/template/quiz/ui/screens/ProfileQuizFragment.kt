@@ -3,13 +3,13 @@ package com.template.quiz.ui.screens
 import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -67,10 +67,10 @@ class ProfileQuizFragment : Fragment(), View.OnClickListener {
 
                 val adapter = ChooseImageAdapter(requireContext(),
                     mutableListOf(
-                        ChooseImageModel("Мужчина", R.mipmap.man),
-                        ChooseImageModel("Парень", R.mipmap.boy),
-                        ChooseImageModel("Женщина", R.mipmap.woman),
-                        ChooseImageModel("Астронавт", R.mipmap.astronaut)
+                        ChooseImageModel("Man", R.mipmap.man),
+                        ChooseImageModel("Boy", R.mipmap.boy),
+                        ChooseImageModel("Woman", R.mipmap.woman),
+                        ChooseImageModel("Astronaut", R.mipmap.astronaut)
                     ), this)
                 val recyclerView = view.findViewById(R.id.recyclerViewDialog) as RecyclerView
                 recyclerView.adapter = adapter
