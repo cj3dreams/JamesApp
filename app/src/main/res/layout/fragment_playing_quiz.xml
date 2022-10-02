@@ -6,7 +6,15 @@
     android:orientation="horizontal"
     android:padding="26dp">
 
+    <ImageView
+        android:visibility="gone"
+        android:scaleType="centerInside"
+        android:id="@+id/questionImgView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
     <TextView
+        android:layout_below="@+id/questionImgView"
         android:id="@+id/questionTx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,16 +29,14 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/questionTx"
+        android:layout_above="@+id/currentQuestionTx"
         android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/answer1Btn"
-            android:layout_width="225dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
             android:maxLines="2"
             android:textAllCaps="false"
             android:textColor="@color/primary_text"
@@ -39,11 +45,9 @@
 
         <Button
             android:id="@+id/answer2Btn"
-            android:layout_width="225dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toEndOf="@+id/answer1Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer1Btn"
             android:maxLines="2"
             android:textAllCaps="false"
             android:textColor="@color/primary_text"
@@ -52,13 +56,9 @@
 
         <Button
             android:id="@+id/answer3Btn"
-            android:layout_width="225dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/answer1Btn"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer2Btn"
             android:maxLines="2"
             android:textAllCaps="false"
             android:textColor="@color/primary_text"
@@ -67,13 +67,9 @@
 
         <Button
             android:id="@+id/answer4Btn"
-            android:layout_width="225dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/answer1Btn"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@id/answer3Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/answer3Btn"
             android:maxLines="2"
             android:textAllCaps="false"
             android:textColor="@color/primary_text"

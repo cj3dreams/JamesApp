@@ -1,12 +1,14 @@
 package com.template.quiz.ui.screens
 
 import android.annotation.SuppressLint
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
@@ -18,6 +20,7 @@ import kotlin.collections.shuffled
 
 class PlayingQuizFragment : Fragment(), View.OnClickListener {
     private lateinit var questionTx: TextView
+    private lateinit var questionImgView: ImageView
     private lateinit var answer1: Button
     private lateinit var answer2: Button
     private lateinit var answer3: Button
@@ -43,6 +46,7 @@ class PlayingQuizFragment : Fragment(), View.OnClickListener {
         val view = layoutInflater.inflate(R.layout.fragment_playing_quiz, container, false)
 
         questionTx = view.findViewById(R.id.questionTx)
+        questionImgView = view.findViewById(R.id.questionImgView)
         answer1 = view.findViewById(R.id.answer1Btn)
         answer2 = view.findViewById(R.id.answer2Btn)
         answer3 = view.findViewById(R.id.answer3Btn)
@@ -99,6 +103,15 @@ class PlayingQuizFragment : Fragment(), View.OnClickListener {
             val shuffledAnswersIndex = listOf(0, 1, 2, 3).shuffled()
             val questionsIndex = (0 until numbersOfQuestions).toList()
             val questionModel = listOfQuestionModel[questionsIndex[currentQuestion]]
+
+            if (questionModel.imageOfQuestion != null ){
+                questionImgView.setImageDrawable(Drawable
+                    .createFromStream(context?.assets?.open("quiz_pictures/"
+                            + questionModel.imageOfQuestion), null))
+                questionImgView.visibility = View.VISIBLE
+            }
+
+            else questionImgView.visibility = View.GONE
 
             questionTx.text = questionModel.question
             questionTx.tag = questionModel.correctAnswer
