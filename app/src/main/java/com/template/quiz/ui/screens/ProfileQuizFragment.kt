@@ -57,7 +57,7 @@ class ProfileQuizFragment : Fragment(), View.OnClickListener {
                 val sharedPrefsUserName = context?.getSharedPreferences("userName", Context.MODE_PRIVATE)
                 if(profileUserName.text.toString().isNotEmpty()) {
                     sharedPrefsUserName?.edit()?.putString("userName", profileUserName.text.toString())?.apply()
-                    Snackbar.make(v, "Сохранено", 1500).show()
+                    Snackbar.make(v, "Saved", 1500).show()
                 }
             }
             R.id.profileImgView ->{

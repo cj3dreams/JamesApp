@@ -34,19 +34,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/profileImgView"
             android:layout_marginTop="20dp"
-            android:hint="Введите свое имя"
+            android:hint="Enter your name"
             android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/profileSaveBtn"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/profileUserNameTx"
-            android:textColor="@color/primary_text"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Сохранить"/>
+            android:layout_below="@+id/profileUserNameTx"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Save"
+            android:backgroundTint="@color/button_dark_blue"
+            android:textColor="@color/primary" />
     </RelativeLayout>
 
 </RelativeLayout>
