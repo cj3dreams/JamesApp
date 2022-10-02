@@ -1,4 +1,4 @@
-package com.template.ui.screens
+package com.template.wallpaper.ui.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,7 +15,7 @@ import com.template.wallpaper.ui.screens.ApplyFragment
 
 class HomeWallpaperFragment : Fragment(), View.OnClickListener {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: WallpapersAdapter
+    private lateinit var wallpapersAdapter: WallpapersAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,10 +32,8 @@ class HomeWallpaperFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        adapter = WallpapersAdapter(requireContext(),
-            WallpapersData.getAllWallpapers(requireContext()),this)
-        recyclerView.adapter = adapter
-
+        wallpapersAdapter = WallpapersAdapter(WallpapersData.getAllWallpapers(requireContext()),this)
+        recyclerView.adapter = wallpapersAdapter
 
     }
 

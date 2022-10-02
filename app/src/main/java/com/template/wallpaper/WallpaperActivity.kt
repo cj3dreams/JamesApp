@@ -9,7 +9,7 @@ import android.view.MotionEvent
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.template.R
-import com.template.ui.screens.HomeWallpaperFragment
+import com.template.wallpaper.ui.screens.HomeWallpaperFragment
 
 class WallpaperActivity : AppCompatActivity() {
     private var firstTimeTripleTouch = 0
