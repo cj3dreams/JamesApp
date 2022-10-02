@@ -68,129 +68,180 @@ object QuestionsConstants {
             null,
             "How long after launch did The James Webb's  reach its planned orbital distance?",
             listOf(
-                "ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"
+                "30 Days",
+                "50 Days",
+                "1 Year",
+                "Instantly"
             ),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"
+            "30 Days"
         ),
 
         QuestionModel(
             null,
-            "ЗАМЕНИТЬ_ВОПРОС_7",
+            "How much does the James Webb telescope cost?",
             listOf(
-                "ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"
+                "10 Billions",
+                "45 Millions",
+                "1.5 Billions",
+                "500 Millions"
             ),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"
+            "10 Billions"
         ),
 
         QuestionModel(
             null,
-            "ЗАМЕНИТЬ_ВОПРОС_8",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+            "Which telescope sees the farthest?",
+            listOf(
+                "Hubble",
+                "James Webb",
+                "TESS",
+                "Fermi"
+            ),
+            "Hubble"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_9",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "Which star is closest to the sun?",
+            listOf(
+                "Alpha Centauri",
+                "Betelgeuse",
+                "Sirius",
+                "UY Scuti"
+            ),
+            "Alpha Centauri"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_10",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "What is the name of the largest star in the universe?",
+            listOf(
+                "UY Scuti",
+                "Betelgeuse",
+                "Sirius",
+                "Sun"
+            ),
+            "UY Scuti"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_11",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "The telescope also represents a collaboration between three space agancies. Which of the below agencies has not been involved in the project?",
+            listOf(
+                "SpaceX (Elon Musk",
+                "CSA(Canada)",
+                "ESA (European Union",
+                "NASA (USA)"
+            ),
+            "SpaceX"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_12",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "The Webb telescope is designed to provide scientists with a way to observe what part of the electromagnetic spectrum?",
+            listOf(
+                "Infrared",
+                "Microwaves",
+                "Ultraviolet",
+                "X-Rays"
+            ),
+            "Infrared"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_13",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "Because it's designed for infrared the JWST will not study objects that are too close to it, or would appear too bright in its lens. Which of these objects will the JWST observe",
+            listOf(
+                "Mars",
+                "Earth",
+                "The Sun",
+                "The Moon"
+            ),
+            "Mars"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_14",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "Which planet was excluded from the solar system",
+            listOf(
+                "Pluto",
+                "Mars",
+                "Venus",
+                "Jupiter"
+            ),
+            "Pluto"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_15",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "What year was pluto excluded from the solar system?",
+            listOf(
+                "2006",
+                "1994",
+                "2012",
+                "2021"
+            ),
+            "2006"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_16",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "What did the James Webb telescope see?",
+            listOf(
+                "Earendel",
+                "Interstellar",
+                "Kepler-150 f",
+                "Chandra"
+            ),
+            "Earendel"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_17",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "Nearest exoplanet",
+            listOf(
+                "Proxima Centauri b",
+                "Kepler-150 f",
+                "Sirius",
+                "Mars"
+            ),
+            "Proxima Centauri b"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_18",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "The most distant exoplanet",
+            listOf(
+                "Kepler-150 f ",
+                "Miller",
+                "Manna",
+                "Gliese 876 d"
+            ),
+            "Kepler-150 f"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_19",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ"),
+        QuestionModel(
+            null,
+            "Which one is a satellite of Saturn,",
+            listOf(
+                "Titan",
+                "Moon",
+                "Neptune",
+                "Phobos"
+            ),
+            "Titan"
+        ),
 
-        QuestionModel(null,
-            "ЗАМЕНИТЬ_ВОПРОС_20",
-            listOf("ПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ",
-                "НЕПРАВИЛЬНЫЙ_ОТВЕТ"),
-            "ПРАВИЛЬНЫЙ_ОТВЕТ")
+        QuestionModel(
+            null,
+            "First artificial earth satellite",
+            listOf(
+                "Sputnik-1",
+                "Astra 2E.",
+                "Asterix",
+                "Astron"
+            ),
+            "Sputnik-1"
+        )
     )
 }
