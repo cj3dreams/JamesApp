@@ -26,11 +26,11 @@
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="@dimen/cardview_default_elevation">
 
-            <ImageView
-                android:id="@+id/wallpaperImgView"
-                android:scaleType="centerCrop"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/wallpaperImgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

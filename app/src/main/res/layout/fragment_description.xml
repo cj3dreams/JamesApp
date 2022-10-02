@@ -10,12 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <View
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
         <ImageView
             android:id="@+id/teleskop_orbit_image"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:layout_below="@id/spacer"
             android:layout_centerHorizontal="true"
-            android:layout_margin="18dp"/>
+            android:layout_margin="18dp" />
 
         <TextView
             android:id="@+id/orbit_text1"

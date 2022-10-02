@@ -102,4 +102,5 @@ It took many years before technology caught up with Oberth\'s idea. The American
     <string name="fact_webbs_telescope">One Side of the Telescope Is Hotter Than Death Valley, the Other Side Is Colder Than Antarctica</string>
     <string name="memory_title">James\nApp</string>
     <string name="select_game_level">Select difficulty level</string>
+    <string name="apply">Apply</string>
 </resources>
