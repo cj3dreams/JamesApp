@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".memory.ui.screens.GameFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:overScrollMode="never"
-        android:nestedScrollingEnabled="false"
-        android:layout_marginHorizontal="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/gameRecyclerView"
-        android:layout_centerVertical="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="10dp"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never" />
 
 </RelativeLayout>

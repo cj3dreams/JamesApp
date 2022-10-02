@@ -1,4 +1,4 @@
-package com.template.ui.screens
+package com.template.wallpaper.ui.screens
 
 import android.app.WallpaperManager
 import android.content.Context
@@ -17,8 +17,8 @@ import android.widget.Toast
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.template.R
-import com.template.data.WallpapersData
-import com.template.model.WallpaperModel
+import com.template.wallpaper.data.WallpapersData
+import com.template.wallpaper.model.WallpaperModel
 import com.template.wallpaper.WallpaperActivity
 
 class ApplyFragment : Fragment() {
@@ -51,10 +51,11 @@ class ApplyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loadingAnimationDrawable = CircularProgressDrawable(requireContext())
-        loadingAnimationDrawable.setStyle(CircularProgressDrawable.DEFAULT)
-        loadingAnimationDrawable.setColorSchemeColors(Color.GRAY, Color.DKGRAY, Color.LTGRAY)
-        loadingAnimationDrawable.setStyle(CircularProgressDrawable.LARGE)
+        loadingAnimationDrawable = CircularProgressDrawable(requireContext()).apply {
+            setStyle(CircularProgressDrawable.DEFAULT)
+            setColorSchemeColors(Color.GRAY, Color.DKGRAY, Color.LTGRAY)
+            setStyle(CircularProgressDrawable.LARGE)
+        }
 
         wallpaperNameTx.text = WallpapersData.getWallpapersNameIfExist(wallpaperModel.fileName)
             ?: resources.getString(R.string.app_name)

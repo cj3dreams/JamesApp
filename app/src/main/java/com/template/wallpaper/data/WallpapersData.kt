@@ -1,7 +1,7 @@
-package com.template.data
+package com.template.wallpaper.data
 
 import android.content.Context
-import com.template.model.WallpaperModel
+import com.template.wallpaper.model.WallpaperModel
 
 object WallpapersData {
 

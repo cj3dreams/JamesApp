@@ -4,18 +4,30 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.template.R
 import kotlin.properties.Delegates
 
-class FinalFragment : Fragment(), View.OnClickListener{
+class FinalFragment : Fragment(), View.OnClickListener {
+
+
+    companion object {
+
+        const val TAG: String = "FinalFragment"
+
+        fun getTimeFragment(seconds: Int, mode: Int) = FinalFragment().apply {
+            this.totallySeconds = seconds; this.gameMode = mode
+        }
+
+    }
+
     private var totallySeconds by Delegates.notNull<Int>()
     private var gameMode by Delegates.notNull<Int>()
     private lateinit var sharedPrefStarts: SharedPreferences
@@ -109,8 +121,4 @@ class FinalFragment : Fragment(), View.OnClickListener{
         if (value != "h") activity?.supportFragmentManager?.fragments?.set(0, HomeFragment())
     }
 
-    companion object{
-        fun getTimeModel(seconds: Int, mode: Int) =
-            FinalFragment().apply { this.totallySeconds = seconds; this.gameMode = mode }
-    }
 }

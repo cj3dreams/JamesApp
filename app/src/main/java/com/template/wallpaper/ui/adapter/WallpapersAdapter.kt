@@ -1,10 +1,9 @@
-package com.template.ui.adapter
+package com.template.wallpaper.ui.adapter
 
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,44 +12,41 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.template.R
-import com.template.model.WallpaperModel
+import com.template.wallpaper.model.WallpaperModel
 
-class WallpapersAdapter(private val context: Context,
+class WallpapersAdapter(
     private val list: List<WallpaperModel>,
     private val onClickListener: View.OnClickListener
-    ): RecyclerView.Adapter<WallpapersAdapter.WallpapersViewHolder>() {
+) : RecyclerView.Adapter<WallpapersAdapter.WallpapersViewHolder>() {
 
-    class WallpapersViewHolder(view: View): RecyclerView.ViewHolder(view){
+    class WallpapersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemClick = view.findViewById(R.id.itemClick) as CardView
         val wallpaperImgView = view.findViewById(R.id.wallpaperImgView) as ImageView
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WallpapersViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_wallpaper, parent, false)
-
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_wallpaper, parent, false)
         return WallpapersViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: WallpapersViewHolder, position: Int) {
         val itemData = list[position]
-
-        try {
+        runCatching {
             holder.itemClick.tag = itemData
             holder.itemClick.setOnClickListener(onClickListener)
-
+            val context = holder.itemView.context
             val loadingAnimationDrawable = CircularProgressDrawable(context)
             loadingAnimationDrawable.setStyle(CircularProgressDrawable.DEFAULT)
             loadingAnimationDrawable.setColorSchemeColors(Color.GRAY, Color.DKGRAY, Color.LTGRAY)
             loadingAnimationDrawable.setStyle(CircularProgressDrawable.LARGE)
 
-            glide(context, holder.wallpaperImgView,
+            glide(
+                context, holder.wallpaperImgView,
                 Uri.parse("file:///android_asset/wallpapers/${itemData.fileName}"),
-            loadingAnimationDrawable)
-        }catch (e: Exception){
-            Log.e("WallpapersAdapter Error", e.message.toString())
+                loadingAnimationDrawable
+            )
         }
     }
 

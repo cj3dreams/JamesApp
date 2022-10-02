@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.ApplyFragment">
+    tools:context=".wallpaper.ui.screens.ApplyFragment">
 
     <ImageView
         android:id="@+id/applyImgView"

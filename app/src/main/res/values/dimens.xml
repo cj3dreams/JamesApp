@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shape_size">36dp</dimen>
+    <dimen name="shape_offset">18dp</dimen>
+    <dimen name="shape_offset_start">-8dp</dimen>
+</resources>

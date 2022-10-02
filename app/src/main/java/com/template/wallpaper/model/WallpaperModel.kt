@@ -1,4 +1,4 @@
-package com.template.model
+package com.template.wallpaper.model
 
 data class WallpaperModel(
     var name: String? = null,

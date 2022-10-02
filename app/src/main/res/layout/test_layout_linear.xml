@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/first_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/shape_size"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_1"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_2"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_3"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/shape_offset_start"
+        android:layout_marginTop="@dimen/shape_offset"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_4"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_5"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_6"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_7"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/shape_offset_start"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_8"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_9"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_10"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_11"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_12"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourth_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/shape_offset_start"
+
+
+        android:layout_marginTop="@dimen/shape_offset"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_13"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_14"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_15"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_16"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/shape_offset_start"
+        android:layout_marginTop="@dimen/shape_size"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_17"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_18"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+        <ImageView
+            android:id="@+id/ic_19"
+            android:layout_width="@dimen/shape_size"
+            android:layout_height="@dimen/shape_size"
+            android:src="@drawable/hexagon_shape" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -5,14 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.template.R
-import com.template.data.WallpapersData
-import com.template.model.WallpaperModel
-import com.template.ui.adapter.WallpapersAdapter
-import java.util.*
+import com.template.wallpaper.data.WallpapersData
+import com.template.wallpaper.model.WallpaperModel
+import com.template.wallpaper.ui.adapter.WallpapersAdapter
+import com.template.wallpaper.ui.screens.ApplyFragment
 
 class HomeWallpaperFragment : Fragment(), View.OnClickListener {
     private lateinit var recyclerView: RecyclerView
