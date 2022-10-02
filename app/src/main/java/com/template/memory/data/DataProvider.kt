@@ -51,68 +51,60 @@ object DataProvider {
 
     private fun getAllItems(): List<MemoryItem> = listOf(
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory1,
+            factRes = R.string.memory1
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory2,
+            factRes = R.string.memory2
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory3,
+            factRes = R.string.memory3
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory4,
+            factRes = R.string.memory4
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory5,
+            factRes = R.string.memory5
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory6,
+            factRes = R.string.memory6
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory7,
+            factRes = R.string.memory7
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory8,
+            factRes = R.string.memory8
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory9,
+            factRes = R.string.memory9
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory10,
+            factRes = R.string.memory10
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory11,
+            factRes = R.string.memory11
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory12,
+            factRes = R.string.memory12
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory13,
+            factRes = R.string.memory13
         ),
         MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
-        ),
-        MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
-        ),
-        MemoryItem(
-            imageRes = R.drawable.james_webb_telescope,
-            factRes = R.string.fact_webbs_telescope
+            imageRes = R.drawable.memory14,
+            factRes = R.string.memory14
         ),
         MemoryItem(
             imageRes = R.drawable.james_webb_telescope,
@@ -123,5 +115,4 @@ object DataProvider {
             factRes = R.string.fact_webbs_telescope
         )
     )
-
 }
