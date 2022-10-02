@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
@@ -27,7 +26,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.*
 
-class GameFragment : Fragment() {
+class GameMemoryFragment : Fragment() {
 
     companion object {
 
@@ -38,11 +37,7 @@ class GameFragment : Fragment() {
         private const val TIMER_DELAY_MILLIS = 3000L
         private const val DELAY_HIDE_ITEMS = 1_000L
 
-        fun getGameMode(value: Int) = GameFragment().apply {
-            arguments = bundleOf(
-                EXTRA_GAME_MODE to value
-            )
-        }
+        fun getGameMode() = GameMemoryFragment()
 
     }
 
@@ -148,6 +143,9 @@ class GameFragment : Fragment() {
     }
 
     private fun updateData(updatedData: List<MemoryColumn>) {
+        if (updatedData.all { column -> column.items.all { it.shape == Shape.COMPLETED || it.isCenterView } }) {
+            navigateToNextScreen()
+        }
         content = updatedData
         gameAdapter?.submitList(updatedData)
     }

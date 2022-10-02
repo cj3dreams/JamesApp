@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
 
         playBtn.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.frgView, GameFragment.getGameMode(selectedSpinner))
+                ?.replace(R.id.frgView, GameMemoryFragment.getGameMode())
                 ?.addToBackStack("backToMain")
                 ?.commit()
         }

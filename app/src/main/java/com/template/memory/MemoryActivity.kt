@@ -3,7 +3,7 @@ package com.template.memory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.template.R
-import com.template.memory.ui.screens.HomeFragment
+import com.template.memory.ui.screens.GameMemoryFragment
 
 class MemoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class MemoryActivity : AppCompatActivity() {
         window.statusBarColor = resources.getColor(R.color.primary_dark)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.frgView, HomeFragment())
+            .replace(R.id.frgView, GameMemoryFragment())
             .commit()
     }
 

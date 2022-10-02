@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Memory" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.JamesApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="colorPrimary">@color/accent</item>
         <item name="colorPrimaryVariant">@color/primary_light</item>
         <item name="colorOnPrimary">@color/primary</item>

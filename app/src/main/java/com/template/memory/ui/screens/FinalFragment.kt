@@ -93,7 +93,7 @@ class FinalFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.finalReplayButton -> changeFragmentClearly(GameFragment.getGameMode(gameMode))
+            R.id.finalReplayButton -> changeFragmentClearly(GameMemoryFragment.getGameMode())
             R.id.finalHomeBtn -> changeFragmentClearly(HomeFragment(), "h")
         }
     }
