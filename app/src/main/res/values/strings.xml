@@ -86,4 +86,5 @@ There have been other satellites out at Sun-Earth L2, where Webb will be, includ
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fact_webbs_telescope">One Side of the Telescope Is Hotter Than Death Valley, the Other Side Is Colder Than Antarctica</string>
+    <string name="memory_title">James\nApp</string>
 </resources>
