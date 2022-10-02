@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/black"
     tools:context=".about.view.DescriptionFragment">
 
     <RelativeLayout
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/teleskop_orbit_image"
             android:layout_margin="18dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17sp" />
 
     </RelativeLayout>

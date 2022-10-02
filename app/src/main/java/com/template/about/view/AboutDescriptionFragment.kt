@@ -9,7 +9,8 @@ import android.widget.Button
 import com.template.R
 
 class AboutDescriptionFragment() : Fragment() {
-    private lateinit var solarOrbitButton: Button
+
+    private lateinit var button1: Button
     private lateinit var button2: Button
     private lateinit var button3: Button
     private lateinit var button4: Button
@@ -21,8 +22,8 @@ class AboutDescriptionFragment() : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View =  layoutInflater.inflate(R.layout.fragment_about_discription, container, false)
-        solarOrbitButton = view.findViewById(R.id.orbit_button)
-        solarOrbitButton.setOnClickListener{
+        button1 = view.findViewById(R.id.orbit_button)
+        button1.setOnClickListener{
             requireActivity().supportFragmentManager.beginTransaction().apply {
                 add(R.id.frag_cont, DescriptionFragment(1)).commit()
             }
