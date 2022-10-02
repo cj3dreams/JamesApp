@@ -1,11 +1,9 @@
 package com.template.about
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.AppCompatActivity
 import com.template.R
 import com.template.about.view.AboutDescriptionFragment
-import com.template.about.view.DescriptionFragment
 
 class AboutAppActivity : AppCompatActivity() {
 
@@ -14,6 +12,14 @@ class AboutAppActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about_app)
         supportFragmentManager.beginTransaction().apply {
             add(R.id.frag_cont, AboutDescriptionFragment()).commit()
+        }
+    }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.fragments.size == 1) {
+            super.onBackPressed()
+        } else {
+            supportFragmentManager.popBackStack()
         }
     }
 }

@@ -10,6 +10,12 @@ import android.widget.TextView
 import com.template.R
 
 class DescriptionFragment(private val number: Int) : Fragment() {
+
+    companion object{
+
+        const val TAG = "DescriptionFragment"
+
+    }
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
 
